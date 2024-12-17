@@ -10,7 +10,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Threading;
 
-namespace CegsLL6.Views;
+namespace CegsSuerc.Views;
 
 /// <summary>
 /// Interaction logic for ControlPanel.xaml
