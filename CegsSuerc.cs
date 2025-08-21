@@ -66,6 +66,7 @@ public partial class CegsSuerc : Cegs
         ProcessDictionary["Clear collection conditions"] = ClearCollectionConditions;
         ProcessDictionary["Collect until condition met"] = CollectUntilConditionMet;
         ProcessDictionary["Stop collecting"] = StopCollecting;
+        ProcessDictionary["Stop collecting immediately"] = StopCollectingImmediately;
         ProcessDictionary["Stop collecting after bleed down"] = StopCollectingAfterBleedDown;
         ProcessDictionary["Evacuate and Freeze first trap"] = FreezeFirstTrap;
         ProcessDictionary["Evacuate and Freeze VTT"] = FreezeVtt;
@@ -91,7 +92,7 @@ public partial class CegsSuerc : Cegs
         // General-purpose process control actions
         ProcessDictionary["Wait for timer"] = WaitForTimer;
         ProcessDictionary["Wait for IP timer"] = WaitIpMinutes;
-        ProcessDictionary["Wait for operator"] = WaitForOperator;
+        ProcessDictionary["Wait for operator"] = Notify.WaitForOperator;
         Separators.Add(ProcessDictionary.Count);
 
         // Transferring CO2
