@@ -6,35 +6,38 @@
         xmlns:wpf="http://schemas.aeonhacs.com/wpf" 
         mc:Ignorable="d"
         Background="{x:Null}">
-    
-    <Canvas Width="336" Height="245" Visibility="Visible">
+
+    <Canvas Width="388" Height="245" Visibility="Visible">
         <!--Vacuum manifold-->
         <wpf:Chamber Component="Section.VM" Canvas.Left="5" Canvas.Top="18" 
-                Data="M0,0 v69 h317 v-69
-                      M26,69 v-13 M52,69 v-13 M124,69 v-69
-                      M98,69 v17 M150,69 v17 M226,69 v17 M252,69 v17 M278,69 v17 M304,69 v17" />
+                Data="M0,0 v86 M0,69 h369 v-69 M124,69 v-69
+                      M26,69 v17 M98,69 v17 M150,69 v17 M252,69 v17 M278,69 v17
+                      M304,69 v-13 M330,69 v-13" />
 
         <!--Vacuum manifold pressure-->
-        <wpf:VMPressure Component="pVM" Canvas.Left="22.5" Canvas.Bottom="162" />
+        <wpf:VMPressure Component="pVM" Direction="RightToLeft" Canvas.Left="274.5" Canvas.Bottom="162.5" />
 
         <!--Gas supplies-->
-        <Canvas Canvas.Left="225" Canvas.Top="104" Width="99" Height="95">
+        <Canvas Canvas.Top="104" Width="46" Height="95" Canvas.Left="-1" HorizontalAlignment="Left" VerticalAlignment="Center">
             <wpf:GasSupply Canvas.Left="0"
                     GasName="O2" AutomationProperties.HelpText="Oxygen gas supply" Valve="vO2_VM" />
             <wpf:GasSupply Canvas.Left="26" 
                     GasName="He" AutomationProperties.HelpText="Helium gas supply" Valve="vHe_VM" FlowValve="vHeFlow" d:FlowValve="" />
-            <wpf:GasSupply Canvas.Left="52" 
+        </Canvas>
+
+        <Canvas Width="46" Height="95" Canvas.Left="251" Canvas.Top="104" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <wpf:GasSupply Canvas.Left="0" 
                     GasName="H2" AutomationProperties.HelpText="Hydrogen gas supply" Valve="vH2_VM" FlowValve="vH2Flow" d:FlowValve="" />
-            <wpf:GasSupply Canvas.Left="78"
+            <wpf:GasSupply Canvas.Left="26"
                     GasName="CO2" AutomationProperties.HelpText="Carbon dioxide gas supply" Valve="vCO2_VM" FlowValve="vCO2Flow" d:FlowValve="" />
         </Canvas>
 
         <!--Vacuum system-->
         <wpf:VacuumSystem Canvas.Left="95" Canvas.Top="104" />
-        
+
         <wpf:Valve Component="vIM_VM" Canvas.Left="0" Canvas.Top="0" />
         <wpf:Valve Component="vCT_VM" Canvas.Left="124" Canvas.Top="0" />
-        <wpf:Valve Component="vGM_VM" Canvas.Left="317" Canvas.Top="0" />
+        <wpf:Valve Component="vGM_VM" Canvas.Left="369" Canvas.Top="0" HorizontalAlignment="Left" VerticalAlignment="Center" />
 
         <wpf:StackingPanel Orientation="Right" Spacing="5" Canvas.Left="182" Canvas.Top="196.5" Height="55" Background="Transparent"
                     wpf:View.Component="Ambient" AutomationProperties.HelpText="Ambient" >
@@ -43,5 +46,5 @@
         </wpf:StackingPanel>
 
     </Canvas>
-    
+
 </wpf:View>
